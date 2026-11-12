@@ -29,7 +29,7 @@ if sinif in ["ASKER", "YAĞMACI"]:
         budget -= 300
     elif silah == "TÜFEK":
         budget -= 700
-    elif silah == "AĞIR MAKINELI":
+    elif silah == "AĞIR MAKİNELİ":
         budget -= 1200
     else:
         print("Bir hata oluştu")
@@ -49,7 +49,7 @@ else:
 
 print(f"Toplam bütçeniz {budget} mermi.")
 
-isirik = str(input("Vücüdunuzda herhangi bir ısırk var mı? (Evet/Hayır)")).lower()
+isirik = str(input("Vücudunuzda herhangi bir ısırık var mı? (Evet/Hayır)")).lower()
 
 if isirik == "evet":
     panzehir = str(input("Panzehir ister misin? 1000 Mermi (Evet/Hayır)")).lower()
@@ -60,7 +60,7 @@ if isirik == "evet":
             print(f"Toplam bütçeniz {budget} mermi.")
         else:
             print("Yeterli bakiye yok.")
-            if silah == "AĞIR MAKINELI":
+            if silah == "AĞIR MAKİNELİ":
                 silah = str(input("Silahını tabanca ve ya tüfeğe çevirip bakiye arttımanız lazım.\nAlmak istediğiniz silahı söyleyin: (Tabanca/Tüfek)")).upper()
                 if silah == "TABANCA":
                     budget += 900
@@ -81,7 +81,7 @@ elif isirik not in ["evet", "hayır"]:
     print("Hatalı giriş yaptınız.")
     exit()
 
-if silah != "AĞIR MAKINELI":
+if silah != "AĞIR MAKİNELİ":
     print("-" * 36)
     print(f"\nBölge:\t{giris_kod[1].upper()}\nSınıf:\t\t\t{sinif}\nSilah:\t\t\t{silah}\nKalan Mermi:\t\t{budget}\n\nSığınağa hoşgeldiniz.")
     print("-"*36)
@@ -89,4 +89,3 @@ else:
     print("-" * 36)
     print(f"\nBölge:\t{giris_kod[1].upper()}\nSınıf:\t\t\t{sinif}\nSilah:\t\t\tAĞIR MAKİNELİ\nKalan Mermi:\t\t{budget}\n\nSığınağa hoşgeldiniz.")
     print("-"*36)
-
